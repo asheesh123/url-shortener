@@ -6,6 +6,7 @@
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci"
+    "export": "next export"
   },
   "dependencies": {
     "mongoose": "^6.5.4",
