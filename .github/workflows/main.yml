@@ -34,7 +34,6 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /url-shortener
           MONGO_URI: ${{ secrets.MONGO_URI }}
-      - run: touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
