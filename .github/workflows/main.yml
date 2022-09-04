@@ -30,10 +30,11 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /url-shortener
           MONGO_URI: ${{ secrets.MONGO_URI }}
-      - run:  npm start & npx wait-on http://localhost:3000
+      - run: npm run export
         env:
           NEXT_PUBLIC_BASE_PATH: /url-shortener
           MONGO_URI: ${{ secrets.MONGO_URI }}
+      - run: touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
